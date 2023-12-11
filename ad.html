@@ -11,20 +11,18 @@
 </head>
 
 <body>
-    <div  id="mobileNascosto" class="mobileNascosto">
-        <div  class="MenuMobileEsc" >
-            <i  onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-x-lg"></i>
-        </div>   
-        <ul  style="display: flex;flex-direction: column;">
+    <div id="mobileNascosto" class="mobileNascosto">
+        <div class="MenuMobileEsc">
+            <i onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-x-lg"></i>
+        </div>
+        <ul style="display: flex;flex-direction: column;">
             <li style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">SHOP</li>
             <li style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">ANNUNCI</li>
             <li style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">BLOG</li>
         </ul>
-  
-</div>
+    </div>
     <header id="header">
         <nav>
-
             <div class="navv">
                 <div class="menuNav">
                     <ul>
@@ -33,10 +31,9 @@
                         <li>BLOG</li>
                     </ul>
                 </div>
-                <div  class="MenuMobile" >
+                <div class="MenuMobile">
                     <i onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-list"></i>
                 </div>
-           
                 <div class="logoNav">
                     <img src="./A/Screenshot 2023-12-10 alle 01.04.16.png" height="50px" alt="">
                 </div>
@@ -44,217 +41,162 @@
                     <div class="cerca"> <input class="bambam" type="search" placeholder="Cerca"
                             style=" border-radius: 50px; padding: 0px 7px; width: 100%;border: 0.5px solid black;">
                     </div>
-                  <div class="registrati">
+                    <div class="registrati">
                         <i style=" font-size: 20px;padding: 0px 5px;" class="bi bi-person"></i>
-                        <i style=" font-size: 19px;padding: 0px 5px;" class="bi bi-bag"></i>
-                  </div>
+                        <i style=" font-size: 18px;padding: 0px 5px;" class="bi bi-bag"></i>
+                    </div>
                 </div>
-
-
             </div>
         </nav>
     </header>
     <main id="main">
-        <div style=" display: flex; flex-direction: column;position: sticky;top: 5px;" class="boxa">
-            <video style="object-fit: cover; " src="./video/videoplayback.mov" width="100%" height="100%" playsinline
-                autoplay muted loop></video>
-
-
-
-
-
-
+        <div class="boxVideo">
+            <video src="./video/videoplayback.mov" playsinline autoplay muted loop></video>
         </div>
-
-
-
-
-
-        <div style="background-color: #ffffff;display: flex;justify-content: center;position: sticky;top: 5px;"
-            class="box2">
-            <h1>P r e s t o</h1>
+        <div class="box2">
+            <h1 class="TextLogo">P r e s t o</h1>
         </div>
         <section class="box">
             <div class="alex">
-
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/1.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/3.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/5.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/7.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/9.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/2.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/4.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/6.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/8.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/10.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/1.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/3.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/5.png" height="80px" alt="">
                 </div>
-                <div class="container">
+                <div class="containerImgTop">
                     <img src="./A/7.png" height="80px" alt="">
                 </div>
-
-
-
             </div>
             <button class="buttonTop">Scopri la colezzione</button>
         </section>
 
-        <div style="background-color: rgb(255, 255, 255);position: sticky;top: 5px;z-index: 1;flex-direction: column;height: auto;width: auto;" class="boxa">
+        <div class="ContainerAllCard">
+            <h1 class="h1AllCard">I tuoi risultati...</h1>
 
-
-
-            <h1  style="color: rgb(0, 0, 0); position: absolute;top: 50px; font-size: 30px; width: 100%;text-align: center;font-family: Quick;">  I tuoi risultati...</h1>
-
-            <section style="z-index: 1;margin-top: 150px;" class="row">
-
+            <section class="row">
 
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
-                        <div class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE DOMED SOLITAIRE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
+                    <div class="ContainerCard">
+                        <div id="bambom0" class="boom"></div>
+                        <div class="LineCard"> </div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct">THE DOMED
+                                SOLITAIRE</h2>
+                            <p class="PriceCard">$ 999</p>
                         </div>
                         <button class="ButtonCard">Aggiungi al carello</button>
                     </div>
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
-                        <div id="bambom" class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE ROUND 3-STONE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
-                        </div>
-                        <button class="ButtonCard">Aggiungi al carello</button>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
+                    <div class="ContainerCard">
                         <div id="bambom1" class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE TRIANGLE SOLITAIRE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
+                        <div class="LineCard"> </div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct">THE ROUND
+                                3-STONE</h2>
+                            <p class="PriceCard">$ 999</p>
                         </div>
                         <button class="ButtonCard">Aggiungi al carello</button>
                     </div>
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
+                    <div class="ContainerCard">
                         <div id="bambom2" class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE ETERNITY SOLITAIRE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
+                        <div class="LineCard"></div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct"">THE TRIANGLE
+                                SOLITAIRE</h2>
+                            <p class=" PriceCard">$ 999</p>
                         </div>
                         <button class="ButtonCard">Aggiungi al carello</button>
                     </div>
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
+                    <div class="ContainerCard">
                         <div id="bambom3" class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE CHANNEL ETERNITY BEZEL SOLITAIRE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
+                        <div class="LineCard"></div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct"">THE ETERNITY
+                                SOLITAIRE</h2>
+                            <p class=" PriceCard">$ 999</p>
                         </div>
                         <button class="ButtonCard">Aggiungi al carello</button>
                     </div>
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                    <div id="cardInt">
+                    <div class="ContainerCard">
                         <div id="bambom4" class="boom"></div>
-
-                        <div
-                            style="width: 100%;height: 1px;background-color: rgb(0, 0, 0);position: relative;top: 8px;">
-                        </div>
-                        <div
-                            style="display: flex;flex-direction: column;align-items: start;justify-content: start;width: 100%;margin-top: 10px;margin-left: 10px;">
-                            <h2 style="font-size: 12px;margin: 0px;font-family: Quick;font-weight: 900;">THE DOMED BEZEL SOLITAIRE</h2>
-                            <p style="font-size: 11px;font-family: Quick;">$ 999</p>
+                        <div class="LineCard"></div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct">THE CHANNEL
+                                ETERNITY BEZEL SOLITAIRE</h2>
+                            <p class="PriceCard">$ 999</p>
                         </div>
                         <button class="ButtonCard">Aggiungi al carello</button>
                     </div>
                 </div>
 
-
-
-
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="ContainerCard">
+                        <div id="bambom5" class="boom"></div>
+                        <div class="LineCard"></div>
+                        <div class="ContainerCardText">
+                            <h2 class="DescriptionProduct"">THE DOMED BEZEL
+                                SOLITAIRE</h2>
+                            <p class=" PriceCard">$ 999</p>
+                        </div>
+                        <button class="ButtonCard">Aggiungi al carello</button>
+                    </div>
+                </div>
 
             </section>
-
-
-
-
-
-
-
-
-
-            
         </div>
-  
+
     </main>
 
-<footer>
+    <footer>
 
-</footer>
+    </footer>
 
-<script src="./ad.js"></script>
+    <script src="./ad.js"></script>
 </body>
 
 </html>

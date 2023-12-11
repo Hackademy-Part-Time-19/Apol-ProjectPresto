@@ -1,25 +1,18 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 * {
-
     border: 0px;
     margin: 0px;
-
 }
-
-
 
 header {
     display: flex;
     flex-direction: column;
-
-
 }
 
 .logoNav {
     position: absolute;
     left: 48%;
-
 }
 
 nav {
@@ -35,22 +28,18 @@ nav {
     align-items: center;
     padding-top: 20px;
     padding-left: 40px;
-    
 }
 
 .cerca {
     width: 79px;
     transition: width 1s;
     color: black;
-
 }
 
 .cerca:hover {
     width: 200px;
     transition: width 1s;
-
 }
-
 
 .navv {
     display: flex;
@@ -70,7 +59,6 @@ nav {
     align-items: center;
 }
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -89,9 +77,7 @@ i {
     font-size: 12px;
     cursor: pointer;
     font-family: Quick;
-
 }
-
 
 li:hover {
     color: rgb(167, 167, 167);
@@ -99,53 +85,80 @@ li:hover {
 
 i:hover {
     color: rgb(167, 167, 167);
-
 }
-
 
 nav {
     display: flex;
     justify-content: space-between;
     z-index: 3;
     height: 60px;
-
 }
 
 
 video {
-
     filter: brightness(0.8);
-
 }
 
 .box2 {
     width: 100vw;
     height: 0vh;
-
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 5px;
 }
 
-.boxa {
+.ContainerAllCard {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    width: auto;
+    height: auto;
+}
+
+.h1AllCard {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: Quick;
+}
+
+.boxVideo {
     width: 100%;
     height: 93vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 5px;
 }
 
-h1 {
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
+
+.TextLogo {
     color: #ffffff;
     font-size: 220px;
     font-family: cinzel;
     position: absolute;
     bottom: -69px;
     margin: 0px;
-
-
-
-
-
 }
 
 .box {
@@ -160,7 +173,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .alex {
@@ -175,27 +187,18 @@ h1 {
     animation-play-state: paused;
 }
 
-.container:hover {
-    transform: translatey(-30px);
-    cursor: pointer;
-    transition-duration: 1s, 1s;
-
-}
-
 
 @keyframes slide {
     from {
         transform: translateX(0);
-
     }
 
     to {
         transform: translateX(-70%);
-
     }
 }
 
-.container {
+.containerImgTop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,6 +206,14 @@ h1 {
     padding: 0px 150px;
     transition-duration: 1s, 1s;
 }
+
+.containerImgTop:hover {
+    transform: translatey(-30px);
+    cursor: pointer;
+    transition-duration: 1s, 1s;
+}
+
+
 
 .buttonTop {
     color: black;
@@ -216,7 +227,7 @@ h1 {
     position: relative;
     top: 90px;
     font-family: Quick;
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .buttonTop:hover {
@@ -232,9 +243,11 @@ margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     margin: 0px;
+    z-index: 1;
+    margin-top: 150px;
 }
 
-#cardInt {
+.ContainerCard {
     width: 90%;
     height: 70vh;
     background-color: rgb(255, 255, 255);
@@ -246,20 +259,14 @@ margin-bottom: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 }
 
-
-
-#cardMadre {
-    margin: 0px;
-    padding: 0px;
-    width: 550px;
+.ContainerCard:hover {
+    border: 1px black solid;
+    padding: 10px;
 }
-
 
 .boom {
-    background-image: url(./A/inel1.jpg);
     width: 100%;
     background-size: cover;
     height: 80%;
@@ -269,49 +276,88 @@ margin-bottom: 30px;
 
 .boom:hover {
     cursor: pointer;
-    background-image: url(./A/fata1.jpg);
     transition-duration: 0.3s;
     background-size: cover;
 }
 
-#bambom{
+#bambom0 {
+    background-image: url(./A/inel1.jpg);
+}
+
+#bambom0:hover {
+    background-image: url(./A/fata1.jpg);
+}
+
+
+#bambom1 {
     background-image: url(./A/inel2.jpg);
 }
-#bambom:hover {
+
+#bambom1:hover {
     background-image: url(./A/fata2.jpg);
-    
 }
 
-#bambom1{
+#bambom2 {
     background-image: url(./A/inel3.jpg);
 }
-#bambom1:hover {
+
+#bambom2:hover {
     background-image: url(./A/fata3.jpg);
-    
 }
 
-#bambom2{
+#bambom3 {
     background-image: url(./A/inel4.jpg);
 }
-#bambom2:hover {
+
+#bambom3:hover {
     background-image: url(./A/fata4.jpg);
-    
 }
 
-#bambom3{
+#bambom4 {
     background-image: url(./A/inel5.jpg);
 }
-#bambom3:hover {
+
+#bambom4:hover {
     background-image: url(./A/fata5.jpg);
-    
 }
 
-#bambom4{
+#bambom5 {
     background-image: url(./A/inel6.jpg);
 }
-#bambom4:hover {
+
+#bambom5:hover {
     background-image: url(./A/fata6.jpg);
-    
+}
+
+
+.LineCard {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 8px;
+}
+
+.ContainerCardText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.DescriptionProduct {
+    font-size: 12px;
+    margin: 0px;
+    font-family: Quick;
+    font-weight: 900;
+}
+
+.PriceCard {
+    font-size: 11px;
+    font-family: Quick;
 }
 
 .ButtonCard {
@@ -322,28 +368,19 @@ margin-bottom: 30px;
     color: rgb(0, 0, 0);
     border: 1px solid black;
     font-size: 10px;
- 
 }
 
 .ButtonCard:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-
-   
 }
 
-#cardInt:hover{
-    border: 1px black solid;
-    padding: 10px;
 
-}
 
 .bambam::-webkit-input-placeholder {
     font-family: Quick;
     font-size: 12px;
-
-  }
-
+}
 
 footer {
     background-color: black;
@@ -353,13 +390,11 @@ footer {
 
 .MenuMobile {
     display: none;
-   padding-left: 35px;
-   z-index: 33;
- 
+    padding-left: 35px;
+    z-index: 33;
 }
 
-
-.mobileNascosto{
+.mobileNascosto {
     background-color: white;
     position: absolute;
     width: 100vw;
@@ -371,66 +406,55 @@ footer {
     padding-top: 90px;
     text-align: center;
     display: none;
-  
 }
 
-
-@media  screen and (max-width: 1117px) {
-  
-
-    h1 {
+@media screen and (max-width: 1117px) {
+    .TextLogo {
         font-size: 170px;
         margin-bottom: 15px;
     }
 }
 
 
-@media  screen and (max-width: 900px) {
-   
- 
-
-    h1 {
+@media screen and (max-width: 900px) {
+    .TextLogo {
         font-size: 120px;
         margin-bottom: 30px;
     }
 }
 
-@media  screen and (max-width: 600px) {
-   
+@media screen and (max-width: 600px) {
     .menuNav {
         display: none;
     }
-    .MenuMobile  {
+
+    .MenuMobile {
         display: block;
     }
-    h1 {
+
+    .TextLogo {
         font-size: 80px;
         margin-bottom: 43px;
     }
+
     .logoNav {
         position: absolute;
         left: 44%;
-    
     }
-.registrati {
-    display: none;
-}
 
-.cerca:hover {
-    width: 120px;
-    transition: width 1s;
-}
-.boxa{
-    height: 70vh;
-}
+    .registrati {
+        display: none;
+    }
+
+    .cerca:hover {
+        width: 120px;
+        transition: width 1s;
+    }
 
 }
-
 
 .MenuMobileEsc {
     transition-duration: 0.3s;
     font-family: Quick;
     padding-left: 15px;
 }
-
-
