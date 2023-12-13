@@ -268,66 +268,99 @@ video {
 
 .boom {
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     height: 80%;
     background-position: center;
     transition-duration: 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .boom:hover {
     cursor: pointer;
     transition-duration: 0.3s;
-    background-size: cover;
-}
-
-#bambom0 {
-    background-image: url(./A/inel1.jpg);
-}
-
-#bambom0:hover {
+    background-size: contain;
     background-image: url(./A/fata1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ContainerFilter {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 95%;
+    height: 60px;
+    position: relative;
+    top: 120px;
+
+}
+
+.BoxFilter {
+    width: max(50%) 1px;
+    height: 40px;
+    border: 1px black solid;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-right: 20px;
+    outline: none;
+    padding-top: 20px;
+}
+
+.BoxFilter p {
+    padding-right: 10px;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: Quick;
+    padding-bottom: 8px
+}
+
+.BoxFilter select {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+.BoxFilter input {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.Cerca {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: Quick;
+    font-size: 12px;
+
+}
+
+.Cerca:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
 }
 
 
-#bambom1 {
-    background-image: url(./A/inel2.jpg);
-}
-
-#bambom1:hover {
-    background-image: url(./A/fata2.jpg);
-}
-
-#bambom2 {
-    background-image: url(./A/inel3.jpg);
-}
-
-#bambom2:hover {
-    background-image: url(./A/fata3.jpg);
-}
-
-#bambom3 {
-    background-image: url(./A/inel4.jpg);
-}
-
-#bambom3:hover {
-    background-image: url(./A/fata4.jpg);
-}
-
-#bambom4 {
-    background-image: url(./A/inel5.jpg);
-}
-
-#bambom4:hover {
-    background-image: url(./A/fata5.jpg);
-}
-
-#bambom5 {
-    background-image: url(./A/inel6.jpg);
-}
-
-#bambom5:hover {
-    background-image: url(./A/fata6.jpg);
-}
 
 
 .LineCard {
@@ -367,7 +400,7 @@ video {
     font-family: Quick;
     color: rgb(0, 0, 0);
     border: 1px solid black;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .ButtonCard:hover {
@@ -457,4 +490,18 @@ footer {
     transition-duration: 0.3s;
     font-family: Quick;
     padding-left: 15px;
+}
+
+.magia {
+    width: 100%;
+    height: 158px;
+   
+    background-color: rgb(221, 221, 221);
+   color: rgb(0, 0, 0);
+    margin-top: 14px; 
+    text-align: center;
+    display: none;
+   padding: 10px;
+  font-size: 12px;
+ 
 }
