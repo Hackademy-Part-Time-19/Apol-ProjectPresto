@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./ad.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav>
+            <div id="nav" class="navv">
+                <div  class="menuNav">
+                    <ul style="cursor: pointer;">
+                        <li onclick="RitornaAllaHome()">HOME</li>
+                        <li onclick="RitornaAlCatalogo()">SHOP</li>
+                        <li>ANNUNCI</li>
+
+                    </ul>
+                </div>
+                <div class="MenuMobile">
+                    <i onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-list"></i>
+                </div>
+                <div class="logoNav">
+                    <img style="cursor: pointer;" ondblclick="RitornaAllaHome()"
+                        src="./A/Screenshot 2023-12-10 alle 01.04.16.png" height="50px" alt="">
+                </div>
+                <div class="Register">
+                    <div class="cerca"> <input class="bambam" type="search" placeholder="Cerca"
+                            style=" border-radius: 50px; padding: 0px 7px; width: 100%;border: 0.5px solid black;">
+                    </div>
+                    <div class="registrati">
+                        <i style=" font-size: 20px;padding: 0px 5px;" class="bi bi-person"></i>
+                        <i style=" font-size: 18px;padding: 0px 5px;" class="bi bi-bag"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="boxVideo" class="boxVideo">
+            <video src="./video/videoplayback.mov" playsinline autoplay muted loop></video>
+        </div>
+        <div class="box2">
+            <h1 class="TextLogo">PreciouStore</h1>
+        </div>
+
+
+        <div style="  border:none; background-color: rgb(255, 255, 255);" class="ContainerAllCard">
+
+            <h2 >Fino al 45% di sconto su modelli selezionati</h2>
+            <button onclick="RitornaAlCatalogo()" class="buttonTop">AQUISTA ORA</button>
+
+            <section id="ContainerProdottiCard" style="margin-top: 100px;" class="row">
+
+                <div class="CardSlideHome" id="CardSlideHome" >
+
+                    <div onclick="VaiAlCatalogoKeri('jewelery')" class="kerkeri"
+                        style="background-image: url(./A/gioielli.jpg);">
+                        <div class="ModaDonna">
+                            <h2>Gioielli</h2>
+                        </div>
+                    </div>
+                    <div onclick="VaiAlCatalogoKeri('electronics')" class="kerkeri"
+                        style="background-image: url(./A/EE.jpg);">
+                        <div class="ModaDonna">
+                            <h2 ">Eletronica</h2>
+                        </div>
+                    </div>
+                    <div onclick="VaiAlCatalogoMen()" class="kerkeri" style="background-image: url(./A/uomo.jpg);">
+                        <div class="ModaDonna">
+                            <h2>Moda Uomo</h2>
+                        </div>
+                    </div>
+                    <div onclick="VaiAlCatalogoWomen()" class="kerkeri"
+                        style="background-image: url(./A/WomensCover.jpg);">
+                        <div class="ModaDonna">
+                            <h2>Moda Donna</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    style="background-color: rgb(234, 234, 234); width: 100vw;height: 300px;display: flex; flex-direction: column;align-items: center;justify-content: center;margin: 50px 0px;padding: 0px;">
+                    <div >
+                        <h2 style="font-size: 25px;margin: 0px;  font-family: didot;text-align: center;"> COSE CHE SAPPIAMO AMERAI</h2>
+                    </div>
+                    <div style="display: flex; justify-content: center;align-items: center;width: 100vw;">
+                        <div
+                            style="display: flex; flex-direction: column;justify-content: space-between; align-items: center;margin-top: 10px;padding: 0px 15px;">
+                            <img src="./A/selezioniamo.png" width="80vw">
+                            <h3 style="font-size: 15px;  font-family: didot;">Selezioniamo</h3>
+                            <p style="font-size: 10px;width: 120px;text-align: center;">i migliori capi esclusivi, solo
+                                per te</p>
+                        </div>
+                    
+                        <div
+                            style="display: flex; flex-direction: column;justify-content: space-between; align-items: center;margin-top: 10px;padding: 0px 15px;">
+                            <img src="./A/ofriamo.png" width="80vw">
+                            <h3 style="font-size: 15px;  font-family: didot;">Ti Offriamo</h3>
+                            <p style="font-size: 10px;width: 120px;text-align: center;">la spedizione express quando hai
+                                dimenticato il tuo outfit del weekend all'ultimo minuto</p>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column;justify-content: space-between; align-items: center;margin-top: 10px;padding: 0px 15px;">
+                            <img src="./A/garantiamo.png" width="80vw">
+                            <h3 style="font-size: 15px;  font-family: didot;">Garantiamo
+
+                            </h3>
+                            <p style="font-size: 10px;width: 120px;text-align: center;">il nostro servizio clienti a
+                                cinque stelle che non ti farà sentire mai ignorata</p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div style=" background-image: url(./A/ba.jpg);" id="ModaDonnaPromo" class="ModaDonnaPromo">
+                    <div class="boyboy" >
+                        <h2 style="text-align: center;color: white; height: 110px;  font-family: didot;">NEW COLLECTION
+                            <br>UOMO <br> AUTUNNO
+                            INVERNO
+                        </h2>
+                        <hr style="width: 40px; color: rgb(255, 255, 255);z-index: 33;">
+                        <button onclick="VaiAlCatalogoMen()" class="buttonWomenPromo">AQUISTA ORA</button>
+                    </div>
+                </div>
+
+                <div style="width: 100%; height: 2px;background-color: 
+              white;"></div>
+
+                <div style="background-image: url(./A/girl.jpg);" id="ModaDonnaPromo" class="ModaDonnaPromo">
+                    <div class="girlgirl" >
+                        <h2 style="text-align: center;color: white; height: 110px;  font-family: didot;">NEW COLLECTION
+                            <br> DONNA <br> AUTUNNO
+                            INVERNO
+                        </h2>
+                        <hr style="width: 40px; color: rgb(255, 255, 255);z-index: 33;">
+                        <button onclick="VaiAlCatalogoWomen()" class="buttonWomenPromo">AQUISTA ORA</button>
+                    </div>
+                </div>
+
+                <div  class="spedizione" >
+                    <div class="containerHOME">
+                        <div class="horizontal-scrolling-items">
+
+                            <div class="horizontal-scrolling-items__item">
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> &nbsp gratuita &nbsp in &nbsp tutta &nbsp italia &nbsp! &nbsp &nbsp
+                                &nbsp| &nbsp &nbsp &nbsp
+                            </div>
+
+                            <div class="horizontal-scrolling-items__item">
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                                <b>Spedizione</b> gratuita in tutta italia &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="OfertaPc" class="OfertaPc">
+                    <div
+                        style="width: 60%; height: 100%;background-image:url(./A/pggaming.PNG); background-size: cover;display: flex; background-position: center;display: flex; justify-content: end;align-items: center; position: relative; flex-direction: column;background-attachment: scroll;">
+                        <h1 class="h1ScontiGame">SPECIALE GAMING <br> <span style="font-size: 2vw;">FINO AL 15% DI
+                                SCONTO</span></BR></h1>
+
+
+
+                    </div>
+                    <div style="background-color: black;width: 40%;height: 100%;">
+                        <div class="boomA ">
+                            <div onclick="VaiAlCatalogoKeri('electronics')"
+                                style="position: relative;top: 360px;left: 20px;">
+                                <div class="center">
+
+                                    <h1>
+                                        <span>Acquista il tuo PC Gaming</span>
+
+                                        <span>Acquista il tuo PC Gaming</span>
+                                        <span>Acquista il tuo PC Gaming</span>
+
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="ContainerFinal" class="ContainerFinal">
+                    <h2 class="GioieliHome">Idee regalo per te e <br> i tuoi cari!</h2>
+                    <div id="divFinal" class="divFinal">
+
+                        <div onclick="VaiAlCatalogoKeri('jewelery')" class="CardGioieliHome"
+                            style="background-image: url(./A/koll.jpg);">
+                            <div class="pol"></div>
+                        </div>
+
+                        <div onclick="VaiAlCatalogoKeri('jewelery')" class="CardGioieliHome"
+                            style="background-image: url(./A/karol.jpg);">
+                            <div class="pol"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="./ad.js"></script>
+</body>
+
+</html>

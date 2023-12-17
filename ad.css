@@ -5,6 +5,7 @@
     margin: 0px;
 }
 
+
 header {
     display: flex;
     flex-direction: column;
@@ -12,7 +13,7 @@ header {
 
 .logoNav {
     position: absolute;
-    left: 48%;
+    left: 50%;
 }
 
 nav {
@@ -27,11 +28,11 @@ nav {
     display: flex;
     align-items: center;
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .cerca {
-    width: 79px;
+    width: 99px;
     transition: width 1s;
     color: black;
 }
@@ -45,16 +46,17 @@ nav {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 100%;
-    height: 70px;
+    width: 100vw;
+    height: 120px;
     z-index: 3px;
     background-color: #ffffff;
     border: 0.5px solid black;
     align-items: center;
+    padding-top: 30px;
 }
 
 .Register {
-    padding-right: 40px;
+    padding-right: 20px;
     display: flex;
     align-items: center;
 }
@@ -81,6 +83,7 @@ i {
 
 li:hover {
     color: rgb(167, 167, 167);
+    cursor: pointer;
 }
 
 i:hover {
@@ -154,10 +157,10 @@ video {
 
 .TextLogo {
     color: #ffffff;
-    font-size: 220px;
+    font-size: 200px;
     font-family: cinzel;
     position: absolute;
-    bottom: -69px;
+    bottom: -62px;
     margin: 0px;
 }
 
@@ -165,7 +168,7 @@ video {
     display: flex;
     overflow-x: scroll;
     width: 100vw;
-    height: 40vh;
+    height: 20vh;
     padding: 0px;
     overflow: hidden;
     background-color: #ffffff;
@@ -181,6 +184,7 @@ video {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     display: flex;
+    margin-top: 0px;
 }
 
 .alex:hover {
@@ -225,9 +229,9 @@ video {
     font-size: 12px;
     padding: 10px 12px;
     position: relative;
-    top: 90px;
+    top: 20px;
     font-family: Quick;
-    margin-bottom: 30px;
+
 }
 
 .buttonTop:hover {
@@ -251,7 +255,7 @@ video {
     width: 90%;
     height: 70vh;
     background-color: rgb(255, 255, 255);
-    border: 0px;
+
     margin: 15px;
     margin-left: 27px;
     margin-bottom: 35px;
@@ -259,14 +263,31 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: 0.5px black solid;
+    border-bottom:none 
 }
 
 .ContainerCard:hover {
-    border: 1px black solid;
-    padding: 10px;
+    border: 0.5px black solid;
+    padding-top: 25px;
+    border-bottom:none ;
+  
+
 }
 
 .boom {
+    width: 100%;
+    background-size: contain;
+    height: 80%;
+    transition-duration: 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+   border: 25px rgb(255, 255, 255) solid;
+
+}
+
+
+.boomKK {
     width: 100%;
     background-size: contain;
     height: 80%;
@@ -274,16 +295,13 @@ video {
     transition-duration: 0.3s;
     background-position: center;
     background-repeat: no-repeat;
+   border-bottom: 25px rgb(255, 255, 255) solid;
 
 }
 
 .boom:hover {
     cursor: pointer;
-    transition-duration: 0.3s;
-    background-size: contain;
-    background-image: url(./A/fata1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+
 }
 
 .ContainerFilter {
@@ -300,7 +318,7 @@ video {
 .BoxFilter {
     width: max(50%) 1px;
     height: 40px;
-    border: 1px black solid;
+    border: 0.5px black solid;
     padding: 12px;
     display: flex;
     justify-content: center;
@@ -334,8 +352,6 @@ video {
     border: none;
     font-size: 14px;
     margin-bottom: 5px;
-    border: 0.5px solid black;
-    border-radius: 5px;
     height: 20px;
 }
 
@@ -343,7 +359,7 @@ video {
     width: 150px;
     height: 40px;
     border: none;
-    border: 1px solid black;
+    border: 0.5px solid black;
 
     display: flex;
     justify-content: center;
@@ -365,7 +381,7 @@ video {
 
 .LineCard {
     width: 100%;
-    height: 1px;
+    height: 0.5px;
     background-color: rgb(0, 0, 0);
     position: relative;
     top: 8px;
@@ -386,11 +402,20 @@ video {
     margin: 0px;
     font-family: Quick;
     font-weight: 900;
+    margin-top: 5px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 97%;
+  
 }
 
 .PriceCard {
     font-size: 11px;
     font-family: Quick;
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 .ButtonCard {
@@ -399,13 +424,16 @@ video {
     background-color: #ffffff;
     font-family: Quick;
     color: rgb(0, 0, 0);
-    border: 1px solid black;
+    border: 0.5px solid black;
     font-size: 12px;
+    border-left: none;
+    border-right: none;
 }
 
 .ButtonCard:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 
@@ -416,14 +444,15 @@ video {
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     width: 100%;
     height: 200px;
+
 }
 
 .MenuMobile {
     display: none;
-    padding-left: 35px;
+    padding-left: 20px;
     z-index: 33;
 }
 
@@ -441,22 +470,50 @@ footer {
     display: none;
 }
 
+.CardSlideHome {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    padding: 0px;
+}
+
+
 @media screen and (max-width: 1117px) {
     .TextLogo {
-        font-size: 170px;
-        margin-bottom: 15px;
+        font-size: 120px;
+        margin-bottom: 24px;
     }
+
+    #CardSlideHome {
+        height: 200px;
+    }
+
+
+
 }
 
 
 @media screen and (max-width: 900px) {
     .TextLogo {
-        font-size: 120px;
-        margin-bottom: 30px;
+        font-size: 90px;
+        margin-bottom: 35px;
     }
+
+    .CardSlideHome {
+        height: 300px;
+    }
+
+
+
 }
 
+
+
+
+
 @media screen and (max-width: 600px) {
+
+
     .menuNav {
         display: none;
     }
@@ -466,8 +523,8 @@ footer {
     }
 
     .TextLogo {
-        font-size: 80px;
-        margin-bottom: 43px;
+        font-size: 55px;
+        margin-bottom: 45px;
     }
 
     .logoNav {
@@ -484,7 +541,124 @@ footer {
         transition: width 1s;
     }
 
+    .CardSlideHome {
+        height: 300px;
+    }
+
+    .boxVideo {
+        height: 70vh;
+    }
+
+    .girlgirl {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .boyboy {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #divFinal {
+        
+        width: 85%;
+        height: 75%;
+      
+    }
+    
+
+    #ContainerFinal {
+      
+        height: 300px;
+      
+    }
+
+
+    
+
+
+ #ModaDonnaPromo{
+    height: 50vh;
+ }
+
+#boxVideo{
+    height: 70vh;
 }
+
+#nav{
+    height:65px ;
+    padding-top: 0px;
+}
+
+
+#paginaProdotto{
+  
+    height: 40vh;
+}
+
+
+
+
+}
+
+
+
+.ContainerFinal {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.divFinal {
+    height: 90%;
+    width: 65%;
+    rotate: -1deg;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+.OfertaPc {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.girlgirl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 100px;
+
+
+}
+
+.boyboy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 100px;
+}
+
+
+
 
 .MenuMobileEsc {
     transition-duration: 0.3s;
@@ -492,16 +666,446 @@ footer {
     padding-left: 15px;
 }
 
+.ContainerAllCard>h2 {
+    font-family: Quick;
+    margin-top: 95px;
+    text-align: center;
+    font-size: 3vw;
+}
+
 .magia {
     width: 100%;
-    height: 158px;
-   
     background-color: rgb(221, 221, 221);
-   color: rgb(0, 0, 0);
-    margin-top: 14px; 
-    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 14px;
     display: none;
-   padding: 10px;
-  font-size: 12px;
+    padding: 15px;
+    font-size: 12px;
+
+
+}
+
+.ContainerAllCardHome {
+    background-color: rgb(255, 255, 255);
+
+    z-index: 1;
+}
+
+/*Home page*/
+
+.kerkeri {
+    background-size: cover;
+    background-position: center;
+    margin: 0px 2px;
+    filter: brightness(0.8);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s;
+
+}
+
+.kerkeri:hover {
+    width: 160vw;
+    transition: width 1s;
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+.ModaDonna {
+    width: auto;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.477);
+
+    padding: 0px 10%;
+
+}
+
+.ModaDonna h2 {
+    font-size: 1vw;
+    font-family: didot;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+
+}
+
+
+
+.ModaDonnaPromo {
+    width: 100%;
+    height: 70vh;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boomA {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #000;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: prespective(1000px) translate(-50%, -50%);
+    transform: skewY(15deg);
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.center:hover {
+    transform: prespective(1000px) translate(-50%, -50%);
+    transform: skewY(0deg);
+}
+
+.center h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 40px;
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: #fff;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+    border: 2px solid red;
+
+}
+
+
+
+
+
+.center h1 span:nth-child(1) {
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+
+
+.center h1 span:nth-child(2) {
+    color: #eb1717;
+    transform: translate(-50%, -50%) skewX(-60deg);
+    left: -38px;
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+}
+
+.center h1 span:nth-child(3) {
+    transform: translate(-50%, -50%) skewY(0deg);
+    left: -76px;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.center:hover h1 span:nth-child(2),
+.center:hover h1 span:nth-child(3) {
+    transform: translate(-50%, -50%) skewX(0deg);
+    left: 0;
+    color: #fff;
+}
+
+
+
+
+
+
+
+.buttonWomenPromo {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 12px;
+    padding: 10px 12px;
+    position: relative;
+    top: 10px;
+    font-family: Quick;
+    border: 0.5px solid black;
+
+
+}
+
+.buttonWomenPromo:hover {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+
+}
+
+
+
+
+
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.containerHOME {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.horizontal-scrolling-items {
+    display: flex;
+    letter-spacing: 2px;
+    font-size: 15px;
+    width: 100%;
+    animation-name: infiniteScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ margin-bottom: 3px;
+}
+
+.horizontal-scrolling-items__item {
+    white-space: nowrap;
+
+}
+
+
+
+
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #ffffff,
+            0 0 11px #ffffff,
+            0 0 17px #ffffff,
+            0 0 40px rgb(255, 0, 0),
+            0 0 80px rgb(255, 0, 0),
+            0 0 90px rgb(255, 0, 0),
+            0 0 100px rgb(255, 0, 0),
+            0 0 150px rgb(255, 0, 0);
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+
+
+
+.h1ScontiGame {
+    position: absolute;
+    top: 350px;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0);
+    animation: flicker 1.5s infinite alternate;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+    rotate: -10deg;
+}
+
+.GioieliHome {
+    color: rgb(0, 0, 0);
+    rotate: -15deg;
+    font-family: Grotters;
+    font-size: 3vw;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.CardGioieliHome {
+    height: 100%;
+    width: 35vw;
+    margin: 0px 10px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s rotate;
+
+}
+
+.CardGioieliHome:hover {
+    cursor: pointer;
+    rotate: -10deg;
+    transition: 1s rotate;
+
+
+}
+
+.pol {
+
+    width: 85%;
+    height: 92%;
+    border: 1px rgb(255, 255, 255) solid;
+}
+
+.pol:hover {
+    border: 1px rgb(0, 0, 0) solid;
+
+}
+
+
+
+.ContainerCardLoading {
+    width: 90%;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    margin: 15px;
+    margin-left: 27px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-top: 10px;
+    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+   
+}
+
+@keyframes load {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/*ProdottoPAge*/
+.paginaProdotto{
+    bottom: 430px;
+    height: 80vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px 0px;
+   margin-top: 50px;
+    
  
+}
+
+.bingo {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    width: 100%;
+    height: 700px;
+}
+
+
+.ContainerCardProdotto{
+    width: 100%;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+   padding: 0px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px black solid;
+  
+}
+
+.ContainerCardProdotto:hover {
+ 
+    padding-top: 25px;
+  
+  
+
+}
+
+
+.ContainerCardProdotto2{
+    width: 100%;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+   padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1px black solid;
+  
+}
+
+.ContainerCardProdotto2:hover {
+ 
+cursor: pointer;
+
+  
+  
+
 }

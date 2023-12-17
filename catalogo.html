@@ -11,31 +11,23 @@
 </head>
 
 <body>
-    <div id="mobileNascosto" class="mobileNascosto">
-        <div class="MenuMobileEsc">
-            <i onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-x-lg"></i>
-        </div>
-        <ul style="display: flex;flex-direction: column;">
-            <li onclick="RitornaAlCatalogo()" style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">SHOP</li>
-            <li style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">ANNUNCI</li>
-            <li style="color: rgb(0, 0, 0); font-size: 20px;padding: 10px 0px;">BLOG</li>
-        </ul>
-    </div>
+ 
     <header id="header">
         <nav>
             <div class="navv">
                 <div class="menuNav">
                     <ul style="cursor: pointer;">
+                        <li onclick="RitornaAllaHome()" >HOME</li>
                         <li  onclick="RitornaAlCatalogo()" >SHOP</li>
                         <li>ANNUNCI</li>
-                        <li>BLOG</li>
+                        
                     </ul>
                 </div>
                 <div class="MenuMobile">
                     <i onclick="mostraMobileNascosto()" style="font-size: 20px;" class="bi bi-list"></i>
                 </div>
                 <div class="logoNav">
-                    <img style="cursor: pointer;"  src="./A/Screenshot 2023-12-10 alle 01.04.16.png" height="50px" alt="">
+                    <img style="cursor: pointer;" onclick="RitornaAllaHome()"  src="./A/Screenshot 2023-12-10 alle 01.04.16.png" height="50px" alt="">
                 </div>
                 <div class="Register">
                     <div class="cerca"> <input class="bambam" type="search" placeholder="Cerca"
@@ -54,7 +46,7 @@
             <video src="./video/videoplayback.mov" playsinline autoplay muted loop></video>
         </div>
         <div class="box2">
-            <h1 class="TextLogo">P r e s t o</h1>
+            <h1 class="TextLogo">PreciouStore</h1>
         </div>
        
 
@@ -83,8 +75,8 @@
                       </select>
                 </div>
                 <div class="BoxFilter" > <!--Nome-->
-                    <p>Nome:</p>
-                  <input id="inputNome"  placeholder="Nome prodotto">
+                    
+                  <input id="inputNome"  placeholder="Cerca un articolo...">
                 </div>
                
                     <button onclick="VaiAlCatalogo()" class="Cerca" >Applica</button>
@@ -93,6 +85,139 @@
             </div>
             <section id="ContainerProdottiCard" class="row">
 
+                <div id="EffetoCaricamento" class="row">
+
+                    <div style="width: 100%; background-color: grey; height: 900px; position: absolute; top: -1098px;z-index: -44;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "></div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;" id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="ContainerCardLoading">
+                            <div style="background-color: grey;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  " class="boomKK"></div>
+                            <div class="LineCard"> </div>
+                            <div style="background-color: grey; height: 30px;margin-right: 10px;   animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;   "
+                                class="ContainerCardText">
+                                <h2 class="DescriptionProduct"></h2>
+                                <p class="PriceCard"></p>
+                            </div>
+                            <button style="background-color: grey; color:grey;border: none;    animation: load 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; cursor: auto;  " class="ButtonCard">Aggiungi al
+                                carello</button>
+                        </div>
+                    </div>
+
+               
+
+                </div>
 
 
             </section>
