@@ -56,18 +56,22 @@ window.addEventListener("load", function () {
     let prezzoMin = 0;
     let prezzoMax = Infinity;
 
-    if (prezzo == "0-100") {
+    if(prezzo === "") {   
+      prezzoMin === "";
+      prezzoMax === "";
+  } else if (prezzo === "0-100") {
+      prezzoMin = 0;
       prezzoMax = 100;
-    } else if (prezzo == "100-200") {
+  } else if (prezzo === "100-200") {
       prezzoMin = 100;
       prezzoMax = 200;
-    } else if (prezzo == "200-500") {
+  } else if (prezzo === "200-300") {
       prezzoMin = 200;
-      prezzoMax = 500;
-    } else if (prezzo == "500") {
-      prezzoMin = 500;
+      prezzoMax = 300;
+  } else if (prezzo === "300") {
+      prezzoMin = 300;
       prezzoMax = Infinity;
-    }
+  }
     filtraCatalogo(nome, prezzoMin, prezzoMax, categoria);
   } else if (window.location.href.includes("PagProdotto.html")) {
     let url = new URL(window.location.href);
@@ -79,72 +83,56 @@ window.addEventListener("load", function () {
 });
 
 function filtraCatalogo(nome, prezzoMin, prezzoMax, categoria) {
-  fetch(`https://fakestoreapi.com/products`)
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("EffetoCaricamento").style.display = "none";
-      catalogoFiltrato = data.filter((prodotto) => {
-        if (
-          prezzoMax != undefined &&
-          nome != undefined &&
-          categoria != undefined
-        ) {
-          return (
-            prodotto.price >= prezzoMin &&
-            prodotto.price <= prezzoMax &&
-            prodotto.title.includes(nome) &&
-            prodotto.category === categoria
-          );
-        } else if (
-          prezzoMax != undefined &&
-          nome != undefined &&
-          categoria === undefined
-        ) {
-          return (
-            prodotto.price >= prezzoMin &&
-            prodotto.price <= prezzoMax &&
-            prodotto.title.includes(nome)
-          );
-        } else if (
-          prezzoMax != undefined &&
-          nome == undefined &&
-          categoria != undefined
-        ) {
-          return (
-            prodotto.price >= prezzoMin &&
-            prodotto.price <= prezzoMax &&
-            prodotto.category.includes(categoria)
-          );
-        } else if (
-          prezzoMax != undefined &&
-          nome == undefined &&
-          categoria == undefined
-        ) {
-          return prodotto.price >= prezzoMin && prodotto.price <= prezzoMax;
-        }
-      });
+  fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => {
+          document.getElementById("EffetoCaricamento").style.display = "none";
+          let prodotti = data;
+          console.log(prodotti)
 
-      for (let i = 0; i < catalogoFiltrato.length; i++) {
-        let prodotto = catalogoFiltrato[i];
 
-        document.getElementById("ContainerProdottiCard").innerHTML += `
-        <div  style="display: flex;"  id="detagli" class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-        
-        <div  class="ContainerCard">
-        <div onclick="VaiAllProdotto(${prodotto.id})" style="background-image: url(${prodotto.image});" class="boom"></div>
-            <div class="LineCard"> </div>
-            <div  class="ContainerCardText">
-                <h2 onclick="VaiAllProdotto(${prodotto.id})" class="DescriptionProduct">${prodotto.title}</h2>
-                <p onclick="VaiAllProdotto(${prodotto.id})" class="PriceCard">€ ${prodotto.price}</p>
-            </div>
-            <div  onclick="descriptione(${i})" id="magia${i}" class="magia"><span style="font-weight: bold">Descrizione:</span> ${prodotto.description})</div>
-            <button class="ButtonCard">Aggiungi al carello</button>
-        </div>
+          let prodottiFiltrati = prodotti.filter((prodotto) => {
+              return (!prezzoMax || (prodotto.price >= prezzoMin && prodotto.price <= prezzoMax)) &&
+                  (!nome || prodotto.title.includes(nome)) &&
+                  (!categoria || prodotto.category === categoria);
+          })
+         visualizzaProdotti(prodottiFiltrati);
+      }).catch((error) =>
+          console.log(error));
+
+}
+
+
+
+
+
+
+
+
+function visualizzaProdotti(prodotti) {
+
+  let container = document.getElementById("ContainerProdottiCard");
+
+  for (let i = 0; i < prodotti.length; i++) {
+      let prodotto = prodotti[i];
+
+      container.innerHTML += `
+      <div  style="display: flex;"  id="detagli" class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+      
+      <div  class="ContainerCard">
+      <div onclick="VaiAllProdotto(${prodotto.id})" style="background-image: url(${prodotto.image});" class="boom"></div>
+          <div class="LineCard"> </div>
+          <div  class="ContainerCardText">
+              <h2 onclick="VaiAllProdotto(${prodotto.id})" class="DescriptionProduct">${prodotto.title}</h2>
+              <p onclick="VaiAllProdotto(${prodotto.id})" class="PriceCard">€ ${prodotto.price}</p>
+          </div>
+          <div  onclick="descriptione(${i})" id="magia${i}" class="magia"><span style="font-weight: bold">Descrizione:</span> ${prodotto.description})</div>
+  <button class="ButtonCard">Aggiungi al carello</button></div>
       </div>
-        `;
-      }
-    })
-    .catch((error) => console.log(error));
+    </div>
+      `;
+
+  }
 }
 
 function descriptione(i) {
@@ -187,9 +175,9 @@ function ottieniProdotti2() {
       prodotti.forEach((prodotto) => {
     
         document.getElementById("bumba").innerHTML += `
-        <div  style="display: flex;padding: 0px;"  id="detagli" class="col-4	col-sm-4 col-md-3	col-lg-3	col-xl-2	col-xxl-2">  
+        <div  style="display: flex;padding: 0px;"  id="detagli" class="col-6	col-sm-4 col-md-3	col-lg-3	col-xl-2	col-xxl-2">  
         <div   class="ContainerCardProdotto2"> 
-    <div onclick="VaiAllProdotto(${prodotto.id})"  style="background-image: url(${prodotto.image});" class="boom"></div>
+    <div onclick="VaiAllProdotto(${prodotto.id})"  style="background-image: url(${prodotto.image}); " class="boom"></div>
      <div style=" height: 1px;" class="LineCard"> </div>
      <div  class="ContainerCardText">
      <h2 onclick="VaiAllProdotto(${prodotto.id})" style=" font-size: 10px;margin-bottom:8px;" class="DescriptionProduct">${prodotto.title}</h2>
@@ -204,4 +192,32 @@ function ottieniProdotti2() {
 }
 if (window.location.href.includes("PagProdotto.html")) {
   ottieniProdotti2();
+}
+
+
+
+
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const containerKER = document.getElementById('Kericontainer');
+
+signUpButton.addEventListener('click', () => {
+	containerKER.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	containerKER.classList.remove("right-panel-active");
+});
+
+
+
+function OpenLogin() {
+  document.getElementById("RegistrazioneUtente").style.display = "flex";
+ 
+}
+
+function CloseLogin() {
+  document.getElementById("RegistrazioneUtente").style.display = "none";
+ 
 }

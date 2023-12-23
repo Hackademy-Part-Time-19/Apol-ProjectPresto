@@ -11,7 +11,74 @@
 </head>
 
 <body>
- 
+    <div id="RegistrazioneUtente" class="RegistrazioneUtente">
+        <div class="RegistrazioneContainer">
+    
+            <div class="containerKeri" id="Kericontainer">
+                
+                <div class="form-container sign-up-container">
+                    <div style="display: flex; justify-content: end;align-items: start; position: absolute; right: 0px;top:10px"><i id="CloseLogin" onclick="CloseLogin()"  class="bi bi-x-circle"></i></div>
+                    <form  action="#">
+                        <h1 >Registrati</h1>
+                        <div class="social-container">
+                            <a href="https://www.facebook.com/" class="social"><i id="social" class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/" class="social"><i id="social" class="bi bi-instagram"></i></a>
+                            <a href="https://twitter.com/?lang=it" class="social"><i id="social" class="bi bi-twitter-x"></i></a>
+                        </div>
+                        <span>oppure inserisci i dati</span>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button onclick="CloseLogin()">Crea account</button>
+                        
+                    </form>
+                </div>
+        
+                <div class="form-container sign-in-container">
+                    <form  action="#">
+                        <h1>Accedi</h1>
+                        <div class="social-container">
+                            <a href="https://www.facebook.com/" class="social"><i id="social" class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/" class="social"><i id="social" class="bi bi-instagram"></i></a>
+                            <a href="https://twitter.com/?lang=it" class="social"><i id="social" class="bi bi-twitter-x"></i></a>
+                        </div>
+                        <span>oppure usa il tuo account
+                        </span>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a href="#">Hai dimenticato la password?</a>
+                        <button onclick="CloseLogin()">Login</button>
+                    </form>
+                </div>
+        
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1 style="font-weight: bold;
+                            margin: 0;">Bentornato!</h1>
+                            <p style="	font-size: 14px;
+                                font-weight: 100;
+                                line-height: 20px;
+                                letter-spacing: 0.5px;
+                                margin: 20px 0 30px;">Effettua il login con i tuoi dati.</p>
+                            <button class="ghost" id="signIn">Login</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <div style="display: flex; justify-content: end;align-items: start; position: absolute; right: 0px;top:10px"><i onclick="CloseLogin()" id="CloseLogin2"  class="bi bi-x-circle"></i></div>
+                            <h1 style="font-weight: bold;
+                            margin: 0;">Ciao!</h1>
+                            <p style="	font-size: 14px;
+                            font-weight: 100;
+                            line-height: 20px;
+                            letter-spacing: 0.5px;
+                            margin: 20px 0 30px;">Inserisci i tuoi dati e inizia il viaggio con noi.</p>
+                            <button class="ghost" id="signUp">Crea account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     <header id="header">
         <nav>
             <div class="navv">
@@ -34,7 +101,7 @@
                             style=" border-radius: 50px; padding: 0px 7px; width: 100%;border: 0.5px solid black;">
                     </div>
                     <div class="registrati">
-                        <i style=" font-size: 20px;padding: 0px 5px;" class="bi bi-person"></i>
+                        <i onclick="OpenLogin()" style=" font-size: 20px;padding: 0px 5px;" class="bi bi-person"></i>
                         <i style=" font-size: 18px;padding: 0px 5px;" class="bi bi-bag"></i>
                     </div>
                 </div>
@@ -57,7 +124,7 @@
                 <div class="BoxFilter" > <!--Categoria-->
                     <p>Categoria:</p>
                     <select id="inputCategoria"  >
-                        <option value="scegli" >Scegli</option>
+                        <option value="" >Scegli</option>
                         <option value="electronics">Eletronica</option>
                         <option value="jewelery">Gioielli</option>
                         <option value="men's clothing">Moda Uomo</option>
